@@ -1,6 +1,6 @@
 <h1>Burger Barn!!!</h1>
 
-<h2>Add your own delicious burger!</h2>
+<h2>Check out our delicios burgers!</h2>
 
 <ul>
   {{#each burgers}}
@@ -10,10 +10,10 @@
   {{/each}}
 </ul>
 
-<h2>Burgers that have been devoured!</h2>
+<h2>Create your own!</h2>
 
 <ul>
-  {{#each burgerss}}
+  {{#each burgers}}
     {{#if devour}}
       {{> burgers/burger-block devour=false}}
     {{/if}}
@@ -28,11 +28,6 @@
     <input type="text" id="ba" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="devour">Devoured?</label><br>
-    <input type="radio" name="devour" value="1" checked> Devoured!<br>
-    <input type="radio" name="devour" value="0"> Created
-  </div>
 
   <button type="submit">Add Burger</button>
 </form>
