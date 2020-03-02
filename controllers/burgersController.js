@@ -11,6 +11,7 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
+    
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
@@ -23,6 +24,7 @@ router.post("/api/burgers", function(req, res) {
     req.body.name, req.body.devour
   ], function(result) {
     // Send back the ID of the new quote
+    console.log("test");
     res.json({ id: result.insertId });
   });
 });
